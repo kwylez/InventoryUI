@@ -11,6 +11,14 @@
 		019B863225A6BDAA0050AEB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B863125A6BDAA0050AEB1 /* ContentView.swift */; };
 		019B863425A6BDAB0050AEB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019B863325A6BDAB0050AEB1 /* Assets.xcassets */; };
 		019B863725A6BDAB0050AEB1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019B863625A6BDAB0050AEB1 /* Preview Assets.xcassets */; };
+		019B864225A6C07D0050AEB1 /* FeedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B864125A6C07D0050AEB1 /* FeedUIView.swift */; };
+		019B864525A6C0C90050AEB1 /* DashboardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B864425A6C0C90050AEB1 /* DashboardUIView.swift */; };
+		019B864825A6C0E50050AEB1 /* AddUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B864725A6C0E50050AEB1 /* AddUIView.swift */; };
+		019B864B25A6C0FD0050AEB1 /* FavoritesUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B864A25A6C0FD0050AEB1 /* FavoritesUIView.swift */; };
+		019B864E25A6C10A0050AEB1 /* SettingsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B864D25A6C10A0050AEB1 /* SettingsUIView.swift */; };
+		019B865325A6C6690050AEB1 /* TabUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B865225A6C6690050AEB1 /* TabUIView.swift */; };
+		019B865625A748CB0050AEB1 /* CurrentUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B865525A748CB0050AEB1 /* CurrentUIView.swift */; };
+		019B865925A748DB0050AEB1 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B865825A748DB0050AEB1 /* Tab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +28,14 @@
 		019B863325A6BDAB0050AEB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		019B863625A6BDAB0050AEB1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		019B863825A6BDAB0050AEB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		019B864125A6C07D0050AEB1 /* FeedUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIView.swift; sourceTree = "<group>"; };
+		019B864425A6C0C90050AEB1 /* DashboardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardUIView.swift; sourceTree = "<group>"; };
+		019B864725A6C0E50050AEB1 /* AddUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUIView.swift; sourceTree = "<group>"; };
+		019B864A25A6C0FD0050AEB1 /* FavoritesUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesUIView.swift; sourceTree = "<group>"; };
+		019B864D25A6C10A0050AEB1 /* SettingsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUIView.swift; sourceTree = "<group>"; };
+		019B865225A6C6690050AEB1 /* TabUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabUIView.swift; sourceTree = "<group>"; };
+		019B865525A748CB0050AEB1 /* CurrentUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUIView.swift; sourceTree = "<group>"; };
+		019B865825A748DB0050AEB1 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +68,15 @@
 		019B862E25A6BDAA0050AEB1 /* InventoryUI */ = {
 			isa = PBXGroup;
 			children = (
-				019B862F25A6BDAA0050AEB1 /* InventoryUIApp.swift */,
-				019B863125A6BDAA0050AEB1 /* ContentView.swift */,
-				019B863325A6BDAB0050AEB1 /* Assets.xcassets */,
 				019B863825A6BDAB0050AEB1 /* Info.plist */,
+				019B865025A6C19A0050AEB1 /* Tabs */,
+				019B863125A6BDAA0050AEB1 /* ContentView.swift */,
+				019B862F25A6BDAA0050AEB1 /* InventoryUIApp.swift */,
+				019B863325A6BDAB0050AEB1 /* Assets.xcassets */,
 				019B863525A6BDAB0050AEB1 /* Preview Content */,
+				019B865225A6C6690050AEB1 /* TabUIView.swift */,
+				019B865525A748CB0050AEB1 /* CurrentUIView.swift */,
+				019B865825A748DB0050AEB1 /* Tab.swift */,
 			);
 			path = InventoryUI;
 			sourceTree = "<group>";
@@ -67,6 +87,18 @@
 				019B863625A6BDAB0050AEB1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		019B865025A6C19A0050AEB1 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				019B864725A6C0E50050AEB1 /* AddUIView.swift */,
+				019B864425A6C0C90050AEB1 /* DashboardUIView.swift */,
+				019B864A25A6C0FD0050AEB1 /* FavoritesUIView.swift */,
+				019B864125A6C07D0050AEB1 /* FeedUIView.swift */,
+				019B864D25A6C10A0050AEB1 /* SettingsUIView.swift */,
+			);
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +170,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				019B864B25A6C0FD0050AEB1 /* FavoritesUIView.swift in Sources */,
 				019B863225A6BDAA0050AEB1 /* ContentView.swift in Sources */,
+				019B865325A6C6690050AEB1 /* TabUIView.swift in Sources */,
+				019B864525A6C0C90050AEB1 /* DashboardUIView.swift in Sources */,
+				019B864825A6C0E50050AEB1 /* AddUIView.swift in Sources */,
+				019B865625A748CB0050AEB1 /* CurrentUIView.swift in Sources */,
+				019B864225A6C07D0050AEB1 /* FeedUIView.swift in Sources */,
+				019B865925A748DB0050AEB1 /* Tab.swift in Sources */,
 				019B863025A6BDAA0050AEB1 /* InventoryUIApp.swift in Sources */,
+				019B864E25A6C10A0050AEB1 /* SettingsUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
