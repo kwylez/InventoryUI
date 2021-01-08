@@ -17,13 +17,13 @@ struct TabUIView: View {
 
             Spacer()
             Image(systemName: self.currentView == .dashboard ? "chart.pie.fill" : "chart.pie")
-                .font(.largeTitle)
+                .font(.title)
                 .foregroundColor(self.currentView == .dashboard ? .purple : .black)
                 .onTapGesture {
                     self.currentView = .dashboard
                 }
             Image(systemName: self.currentView == .feed ? "rectangle.grid.1x2.fill" : "rectangle.grid.1x2")
-                .font(.largeTitle)
+                .font(.title)
                 .foregroundColor(self.currentView == .feed ? .purple : .black)
                 .onTapGesture {
                     self.currentView = .feed
@@ -32,16 +32,16 @@ struct TabUIView: View {
             AddButtonTabView(action: {
                 self.currentView = .dashboard
             })
-            .offset(y: -22.5)
+            .offset(y: -12.5)
             
             Image(systemName: self.currentView == .favorites ? "folder.fill" : "folder")
-                .font(.largeTitle)
+                .font(.title)
                 .foregroundColor(self.currentView == .favorites ? .purple : .black)
                 .onTapGesture {
                     self.currentView = .favorites
                 }
             Image(systemName: self.currentView == .settings ? "gearshape.fill" : "gearshape")
-                .font(.largeTitle)
+                .font(.title)
                 .foregroundColor(self.currentView == .settings ? .purple : .black)
                 .onTapGesture {
                     self.currentView = .settings

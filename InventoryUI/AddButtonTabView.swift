@@ -10,6 +10,8 @@ import SwiftUI
 struct AddButtonTabView: View {
     
     let action: () -> Void
+    
+    var radius: CGFloat = 50.0
 
     var body: some View {
         
@@ -18,14 +20,14 @@ struct AddButtonTabView: View {
             Image(systemName: "plus.circle.fill")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 55.0, height: 55.0, alignment: .center)
-                .foregroundColor(Color(.systemBlue))
+                .frame(width: radius, height: radius, alignment: .center)
+                .foregroundColor(.red)
                 .background(Color(.white))
-                .cornerRadius(55.0/2)
-                .overlay(RoundedRectangle(cornerRadius: 55.0/2).stroke(Color(.blue), lineWidth: 2))
+                .cornerRadius(radius/2)
+                .shadow(color: Color.red.opacity(0.3), radius: 10, x: 0, y: 0)
 
         }
-        .frame(width: 55.0, height: 55.0)
+        .frame(width: radius, height: radius)
         .onTapGesture(perform: action)
     }
 }
