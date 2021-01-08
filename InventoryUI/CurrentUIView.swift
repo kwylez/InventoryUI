@@ -11,13 +11,15 @@ struct CurrentUIView: View {
     
     @Binding var currentView: Tab
     
+    var gradientHeight: CGFloat
+    
     var body: some View {
         
         VStack {
             
             switch self.currentView {
             case .dashboard:
-                DashboardUIView()
+                DashboardUIView(gradientHeight: gradientHeight)
             case .favorites:
                 FavoritesUIView()
             case .feed:
@@ -31,6 +33,6 @@ struct CurrentUIView: View {
 
 struct CurrentUIView_Previews: PreviewProvider {
     static var previews: some View {
-        CurrentUIView(currentView: .constant(.dashboard))
+        CurrentUIView(currentView: .constant(.dashboard), gradientHeight: 250)
     }
 }

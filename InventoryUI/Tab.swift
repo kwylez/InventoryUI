@@ -8,5 +8,5 @@
 import Foundation
 
 enum Tab {
-    case dashboard, favorites, feed, settings
+    case dashboard, feed, favorites, settings
 }

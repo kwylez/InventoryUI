@@ -11,8 +11,6 @@ struct ContentView: View {
     
     @State private var currentView: Tab = .dashboard
     
-    let gradientColors = Gradient(colors: [Color.pink, Color.purple])
-    
     var body: some View {
     
         GeometryReader {reader in
@@ -20,33 +18,34 @@ struct ContentView: View {
             ZStack {
                 
                 ScrollView {
-                    LinearGradient(gradient: gradientColors, startPoint: .top, endPoint: .bottom)
-                        .frame(height: reader.size.height / 3)
-                    CurrentUIView(currentView: self.$currentView)
+                    CurrentUIView(currentView: self.$currentView, gradientHeight: reader.size.height / 2)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
 
                 VStack {
                     Spacer()
-                    TabUIView()
+                    Divider()
+                    TabUIView(currentView: self.$currentView)
                         .frame(minHeight: 70)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.pink)
-                }
-                
-                VStack {
-                    Spacer()
-                    Text("Hello world \(reader.size.height)")
-                    Spacer()
                 }
             }
-            .edgesIgnoringSafeArea(.all)
+            .frame(width: reader.size.width)
         }
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        
+        Group {
+
+            ContentView()
+                .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
+                .previewDisplayName("iPhone 12")
+            
+            ContentView()
+                .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
+                .previewDisplayName("iPhone XS Max")
+        }
     }
 }

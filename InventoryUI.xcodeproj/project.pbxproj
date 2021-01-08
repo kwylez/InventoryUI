@@ -19,6 +19,8 @@
 		019B865325A6C6690050AEB1 /* TabUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B865225A6C6690050AEB1 /* TabUIView.swift */; };
 		019B865625A748CB0050AEB1 /* CurrentUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B865525A748CB0050AEB1 /* CurrentUIView.swift */; };
 		019B865925A748DB0050AEB1 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B865825A748DB0050AEB1 /* Tab.swift */; };
+		01A4CB3725A80B1500EEF35A /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A4CB3625A80B1500EEF35A /* Color+Extensions.swift */; };
+		01E7538025A906E4001020FD /* AddButtonTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E7537F25A906E4001020FD /* AddButtonTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		019B865225A6C6690050AEB1 /* TabUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabUIView.swift; sourceTree = "<group>"; };
 		019B865525A748CB0050AEB1 /* CurrentUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUIView.swift; sourceTree = "<group>"; };
 		019B865825A748DB0050AEB1 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		01A4CB3625A80B1500EEF35A /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		01E7537F25A906E4001020FD /* AddButtonTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 				019B865225A6C6690050AEB1 /* TabUIView.swift */,
 				019B865525A748CB0050AEB1 /* CurrentUIView.swift */,
 				019B865825A748DB0050AEB1 /* Tab.swift */,
+				01A4CB3625A80B1500EEF35A /* Color+Extensions.swift */,
+				01E7537F25A906E4001020FD /* AddButtonTabView.swift */,
 			);
 			path = InventoryUI;
 			sourceTree = "<group>";
@@ -178,7 +184,9 @@
 				019B865625A748CB0050AEB1 /* CurrentUIView.swift in Sources */,
 				019B864225A6C07D0050AEB1 /* FeedUIView.swift in Sources */,
 				019B865925A748DB0050AEB1 /* Tab.swift in Sources */,
+				01E7538025A906E4001020FD /* AddButtonTabView.swift in Sources */,
 				019B863025A6BDAA0050AEB1 /* InventoryUIApp.swift in Sources */,
+				01A4CB3725A80B1500EEF35A /* Color+Extensions.swift in Sources */,
 				019B864E25A6C10A0050AEB1 /* SettingsUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
