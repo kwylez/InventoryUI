@@ -19,6 +19,7 @@ struct ContentView: View {
                 
                 ScrollView {
                     CurrentUIView(currentView: self.$currentView, gradientHeight: reader.size.height / 2)
+                        .frame(maxHeight: .infinity)
                 }
 
                 VStack {
@@ -28,7 +29,7 @@ struct ContentView: View {
                         .frame(minHeight: 70)
                 }
             }
-            .frame(width: reader.size.width)
+            .frame(width: reader.size.width, height: reader.size.height)
         }
         .edgesIgnoringSafeArea(.all)
     }
@@ -42,10 +43,6 @@ struct ContentView_Previews: PreviewProvider {
             ContentView()
                 .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
                 .previewDisplayName("iPhone 12")
-            
-            ContentView()
-                .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
-                .previewDisplayName("iPhone XS Max")
         }
     }
 }

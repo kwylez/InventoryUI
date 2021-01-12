@@ -73,16 +73,16 @@
 			isa = PBXGroup;
 			children = (
 				019B863825A6BDAB0050AEB1 /* Info.plist */,
-				019B865025A6C19A0050AEB1 /* Tabs */,
+				01E7537F25A906E4001020FD /* AddButtonTabView.swift */,
+				01A4CB3625A80B1500EEF35A /* Color+Extensions.swift */,
 				019B863125A6BDAA0050AEB1 /* ContentView.swift */,
+				019B865525A748CB0050AEB1 /* CurrentUIView.swift */,
 				019B862F25A6BDAA0050AEB1 /* InventoryUIApp.swift */,
+				019B865825A748DB0050AEB1 /* Tab.swift */,
+				019B865225A6C6690050AEB1 /* TabUIView.swift */,
 				019B863325A6BDAB0050AEB1 /* Assets.xcassets */,
 				019B863525A6BDAB0050AEB1 /* Preview Content */,
-				019B865225A6C6690050AEB1 /* TabUIView.swift */,
-				019B865525A748CB0050AEB1 /* CurrentUIView.swift */,
-				019B865825A748DB0050AEB1 /* Tab.swift */,
-				01A4CB3625A80B1500EEF35A /* Color+Extensions.swift */,
-				01E7537F25A906E4001020FD /* AddButtonTabView.swift */,
+				019B865025A6C19A0050AEB1 /* Tabs */,
 			);
 			path = InventoryUI;
 			sourceTree = "<group>";
