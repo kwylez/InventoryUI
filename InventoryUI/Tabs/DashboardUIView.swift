@@ -31,18 +31,68 @@ struct DashboardUIView: View {
         )
     
     var body: some View {
-        
-        GeometryReader{reader in
-    
-            ZStack(alignment: .top) {
 
-                LinearGradient(
-                    gradient: gradientColors,
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-                .frame(height: gradientHeight)
+        ZStack(alignment: .top) {
                 
+                VStack {
+    
+                    LinearGradient(
+                        gradient: gradientColors,
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                    .frame(height: gradientHeight)
+                    Spacer()
+                    ScrollView {
+                        
+                        LazyVStack(alignment: .leading, spacing: 5) {
+                            
+                            Text("Recent Purchases")
+                                .bold()
+                                .font(.system(.title2, design: .rounded))
+                            
+                            ScrollView(.horizontal) {
+                                
+                                LazyHStack(spacing: 10) {
+                                
+                                    ForEach(sampleData, id: \.id){product in
+                                    
+                                        Image(product.imageName)
+                                            .resizable()
+                                            .scaledToFill()
+                                            .frame(width: 200, height: 125)
+                                            .cornerRadius(10)
+                                    }
+                                }
+                            }
+                        }
+                        
+                        VStack(alignment: .leading) {
+                            
+                            Text("Last Month")
+                                .bold()
+                                .font(.system(.title3, design: .rounded))
+                            
+                            ScrollView {
+                                
+                                LazyVStack(alignment: .leading){
+                                
+                                    ForEach(sampleData, id: \.id){product in
+                                        
+                                        Image(product.imageName)
+                                            .resizable()
+                                            .scaledToFill()
+                                            .frame(width: 50, height: 50)
+                                            .shadow(color: .red, radius: 10, x: 8, y: -8)
+                                            .cornerRadius(10)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .padding([.horizontal, .top], 20)
+                }
+
                 VStack(alignment: .leading) {
                     
                     VStack(spacing: 5.0) {
@@ -147,12 +197,11 @@ struct DashboardUIView: View {
                 }
                 .padding(.top, 64)
             }
-        }
     }
 }
 
 struct DashboardUIView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardUIView(gradientHeight: 100)
+        DashboardUIView(gradientHeight: 480)
     }
 }

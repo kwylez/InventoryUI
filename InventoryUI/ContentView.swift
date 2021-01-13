@@ -27,6 +27,7 @@ struct ContentView: View {
                     Divider()
                     TabUIView(currentView: self.$currentView)
                         .frame(minHeight: 70)
+                        .background(Color.white)
                 }
             }
             .frame(width: reader.size.width, height: reader.size.height)
@@ -38,11 +39,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         
-        Group {
-
-            ContentView()
-                .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
-                .previewDisplayName("iPhone 12")
-        }
+        ContentView()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
+            .previewDisplayName("iPhone 12")
     }
 }

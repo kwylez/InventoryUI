@@ -32,7 +32,7 @@ struct TabUIView: View {
             AddButtonTabView(action: {
                 self.currentView = .dashboard
             })
-            .offset(y: -12.5)
+            .offset(y: -22.5)
             
             Image(systemName: self.currentView == .favorites ? "folder.fill" : "folder")
                 .font(.title)

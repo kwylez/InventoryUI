@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		018976F725AE511800EE7DF7 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018976F625AE511800EE7DF7 /* Product.swift */; };
 		019B863025A6BDAA0050AEB1 /* InventoryUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B862F25A6BDAA0050AEB1 /* InventoryUIApp.swift */; };
 		019B863225A6BDAA0050AEB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B863125A6BDAA0050AEB1 /* ContentView.swift */; };
 		019B863425A6BDAB0050AEB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019B863325A6BDAB0050AEB1 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		018976F625AE511800EE7DF7 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		019B862C25A6BDAA0050AEB1 /* InventoryUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InventoryUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		019B862F25A6BDAA0050AEB1 /* InventoryUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryUIApp.swift; sourceTree = "<group>"; };
 		019B863125A6BDAA0050AEB1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		018976F525AE510C00EE7DF7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				018976F625AE511800EE7DF7 /* Product.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		019B862325A6BDAA0050AEB1 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 		019B862E25A6BDAA0050AEB1 /* InventoryUI */ = {
 			isa = PBXGroup;
 			children = (
+				018976F525AE510C00EE7DF7 /* Models */,
 				019B863825A6BDAB0050AEB1 /* Info.plist */,
 				01E7537F25A906E4001020FD /* AddButtonTabView.swift */,
 				01A4CB3625A80B1500EEF35A /* Color+Extensions.swift */,
@@ -188,6 +199,7 @@
 				019B863025A6BDAA0050AEB1 /* InventoryUIApp.swift in Sources */,
 				01A4CB3725A80B1500EEF35A /* Color+Extensions.swift in Sources */,
 				019B864E25A6C10A0050AEB1 /* SettingsUIView.swift in Sources */,
+				018976F725AE511800EE7DF7 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
