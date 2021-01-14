@@ -73,22 +73,45 @@ struct DashboardUIView: View {
                                 .bold()
                                 .font(.system(.title3, design: .rounded))
                             
-                            ScrollView {
+                            ScrollView(showsIndicators: false) {
                                 
                                 LazyVStack(alignment: .leading){
                                 
                                     ForEach(sampleData, id: \.id){product in
                                         
-                                        Image(product.imageName)
-                                            .resizable()
-                                            .scaledToFill()
-                                            .frame(width: 50, height: 50)
-                                            .shadow(color: .red, radius: 10, x: 8, y: -8)
-                                            .cornerRadius(10)
+                                        HStack(alignment: .top) {
+                                            
+                                            Image(product.imageName)
+                                                .resizable()
+                                                .scaledToFill()
+                                                .frame(width: 50, height: 50)
+                                                .shadow(color: .red, radius: 10, x: 8, y: -8)
+                                                .cornerRadius(10)
+                                            
+                                            VStack(alignment: .leading, spacing: 5) {
+                                                
+                                                Text(product.name)
+                                                    .bold()
+                                                    .font(.system(.body, design: .rounded))
+                                                Text(product.purchaseDateCategory)
+                                                    .font(.system(.footnote, design: .rounded))
+                                                    .foregroundColor(.gray)
+                                            }
+                                            Spacer()
+                                            VStack {
+                                                Spacer()
+                                                Text(product.costDisplay)
+                                                    .bold()
+                                                    .font(.system(.footnote, design: .rounded))
+                                                    .foregroundColor(.gray)
+                                                Spacer()
+                                            }
+                                        }
                                     }
                                 }
                             }
                         }
+                        .padding(.top, 30)
                     }
                     .padding([.horizontal, .top], 20)
                 }
