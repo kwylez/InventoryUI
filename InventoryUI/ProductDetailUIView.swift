@@ -72,7 +72,7 @@ struct ProductDetailUIView: View {
                     }
                     .padding(.top, 64)
                     .padding(.horizontal)
-                }   
+                }
                 .overlay(
                     HStack(spacing: 10) {
                         
@@ -207,17 +207,17 @@ struct ProductDetailUIView_Previews: PreviewProvider {
         
             ProductDetailUIView(selectedProduct: .constant(sampleData[0]), detailIsShown: .constant(false))
             
-//            ProductDetailUIView(change: .constant(false), selectedProduct: .constant(sampleData[1]))
-//
-//            ProductDetailUIView(change: .constant(false), selectedProduct: .constant(sampleData[2]))
-//
-//            ProductDetailUIView(change: .constant(false), selectedProduct: .constant(sampleData[3]))
-//
-//            ProductDetailUIView(change: .constant(false), selectedProduct: .constant(sampleData[4]))
-//
-//            ProductDetailUIView(change: .constant(false), selectedProduct: .constant(sampleData[5]))
-//
-//            ProductDetailUIView(change: .constant(false), selectedProduct: .constant(sampleData[6]))
+            ProductDetailUIView(selectedProduct: .constant(sampleData[1]), detailIsShown: .constant(false))
+            
+            ProductDetailUIView(selectedProduct: .constant(sampleData[2]), detailIsShown: .constant(false))
+            
+            ProductDetailUIView(selectedProduct: .constant(sampleData[3]), detailIsShown: .constant(false))
+
+            ProductDetailUIView(selectedProduct: .constant(sampleData[4]), detailIsShown: .constant(false))
+            
+            ProductDetailUIView(selectedProduct: .constant(sampleData[5]), detailIsShown: .constant(false))
+            
+            ProductDetailUIView(selectedProduct: .constant(sampleData[6]), detailIsShown: .constant(false))
         }
     }
 }
