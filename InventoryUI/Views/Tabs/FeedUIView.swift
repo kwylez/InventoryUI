@@ -9,7 +9,10 @@ import SwiftUI
 
 struct FeedUIView: View {
     var body: some View {
-        Text("Hello World 2")
+        VStack {
+            Text("Hello World 2")
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 

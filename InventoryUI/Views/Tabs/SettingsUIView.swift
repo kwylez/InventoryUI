@@ -9,7 +9,10 @@ import SwiftUI
 
 struct SettingsUIView: View {
     var body: some View {
-        Text("Hello World 5")
+        VStack {
+            Text("Hello World 5")
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
