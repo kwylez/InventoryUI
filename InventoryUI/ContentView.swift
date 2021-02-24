@@ -11,6 +11,9 @@ struct ContentView: View {
     
     @State private var currentView: Tab = .dashboard
     
+    /// move to environment var?
+    @State private var detailIsShown: Bool = false
+    
     var body: some View {
     
         GeometryReader {reader in
@@ -18,8 +21,13 @@ struct ContentView: View {
             ZStack {
                 
                 ScrollView {
-                    CurrentUIView(currentView: self.$currentView, gradientHeight: reader.size.height / 2)
-                        .frame(maxHeight: .infinity)
+                    
+                    CurrentUIView(
+                        currentView: self.$currentView,
+                        detailsIsShown: self.$detailIsShown,
+                        gradientHeight: reader.size.height / 2
+                    )
+                    .frame(maxHeight: .infinity)
                 }
 
                 VStack {
@@ -29,6 +37,7 @@ struct ContentView: View {
                         .frame(minHeight: 70)
                         .background(Color.white)
                 }
+                .opacity(detailIsShown ? 0 : 1)
             }
             .frame(width: reader.size.width, height: reader.size.height)
         }

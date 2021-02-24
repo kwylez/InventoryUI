@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum ProductCategory: String {
     
@@ -34,6 +35,8 @@ struct Product: Identifiable {
     let datePurchased: Date
     
     let cost: NSNumber
+    
+    let color: Color
 }
 
 extension Product {
@@ -57,13 +60,13 @@ extension Product {
 
 let sampleData: Array<Product> = [
     
-    Product(imageName: "blue.disk", name: "Disk", category: .kitchen, description: "A really cool blue disk", datePurchased: Date(), cost: 159.99),
-    Product(imageName: "candles", name: "Candles", category: .kitchen, description: "Really cool candles", datePurchased: Date(), cost: 30.00),
-    Product(imageName: "drone", name: "Drone", category: .electronic, description: "A really cool drone", datePurchased: Date(), cost: 85.00),
-    Product(imageName: "girl.green.barn.door", name: "Shirt and Dress", category: .clothing, description: "A really cool outfit", datePurchased: Date(), cost: 98.56),
-    Product(imageName: "purple.cabbage.soup", name: "Cookware", category: .kitchen, description: "Really cool cookware", datePurchased: Date(), cost: 12.98),
-    Product(imageName: "ring", name: "Ring", category: .clothing, description: "A really cool ring", datePurchased: Date(), cost: 9.99),
-    Product(imageName: "watch", name: "Watch", category: .healthAndFitness, description: "A really cool watch", datePurchased: Date(), cost: 1555.99),
+    Product(imageName: "blue.disk", name: "Disk", category: .kitchen, description: "A really cool blue disk", datePurchased: Date(), cost: 159.99, color: Color.purple),
+    Product(imageName: "candles", name: "Candles", category: .kitchen, description: "Really cool candles", datePurchased: Date(), cost: 30.00, color: Color.black),
+    Product(imageName: "drone", name: "Drone", category: .electronic, description: "A really cool drone", datePurchased: Date(), cost: 85.00, color: Color.black),
+    Product(imageName: "girl.green.barn.door", name: "Shirt and Dress", category: .clothing, description: "A really cool outfit", datePurchased: Date(), cost: 98.56, color: Color.black),
+    Product(imageName: "purple.cabbage.soup", name: "Cookware", category: .kitchen, description: "Really cool cookware", datePurchased: Date(), cost: 12.98, color: Color.red),
+    Product(imageName: "ring", name: "Ring", category: .clothing, description: "A really cool ring", datePurchased: Date(), cost: 9.99, color: Color.red),
+    Product(imageName: "watch", name: "Watch", category: .healthAndFitness, description: "A really cool watch", datePurchased: Date(), cost: 1555.99, color: Color.green),
 ]
 
 fileprivate extension Date {
