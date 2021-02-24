@@ -72,7 +72,7 @@ struct ProductDetailUIView: View {
                     }
                     .padding(.top, 64)
                     .padding(.horizontal)
-                }
+                }   
                 .overlay(
                     HStack(spacing: 10) {
                         
@@ -122,7 +122,7 @@ struct ProductDetailUIView: View {
                                         .padding(.top)
                             )
                             Text("2 Receipt")
-                                .font(.system(.caption))
+                                .font(.system(.caption, design: .rounded))
                                 .foregroundColor(Color("DetailReceiptsImageBackground")
                                 )
                         }
@@ -148,7 +148,7 @@ struct ProductDetailUIView: View {
                                         .padding(.top)
                             )
                             Text("12801669167")
-                                .font(.system(.caption))
+                                .font(.system(.caption, design: .rounded))
                                 .foregroundColor(Color("DetailReceiptsImageBackground")
                                 )
                         }
@@ -160,31 +160,40 @@ struct ProductDetailUIView: View {
                     
                     VStack(alignment: .leading, spacing: 10) {
                         Text("Purchased on")
-                            .font(.system(.caption))
+                            .font(.system(.caption, design: .rounded))
                             .foregroundColor(.blue)
                         Text("Jan 20, 2020")
-                            .font(.system(.callout))
+                            .font(.system(.callout, design: .rounded))
                     }
                     
                     Spacer()
                     
                     VStack(alignment: .leading, spacing: 10) {
                         Text("Category")
-                            .font(.system(.caption))
+                            .font(.system(.caption, design: .rounded))
                             .foregroundColor(.purple)
                         Text(selectedProduct?.category.rawValue ?? "")
-                            .font(.system(.callout))
+                            .font(.system(.callout, design: .rounded))
                     }
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.horizontal, 20)
                 .padding(.top, 35)
                 
-                VStack(alignment: .leading) {
-                    
-                    Text("Description")
-                    Text(selectedProduct?.description ?? "")
+                HStack {
+                    VStack(alignment: .leading, spacing: 10) {
+                        
+                        Text("Description")
+                            .foregroundColor(.orange)
+                            .font(.system(.caption, design: .rounded))
+                        Text(selectedProduct?.description ?? "")
+                            .font(.system(.callout, design: .rounded))
+                    }
+                    Spacer()
                 }
+                .padding(.top)
+                .padding(.leading, 20)
+                .frame(maxWidth: .infinity)
             }
             .background(Color.white)
         }
