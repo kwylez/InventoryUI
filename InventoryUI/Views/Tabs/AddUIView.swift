@@ -11,8 +11,8 @@ struct AddUIView: View {
     var body: some View {
         VStack {
             Text("Hello World 3")
-            Spacer()
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 

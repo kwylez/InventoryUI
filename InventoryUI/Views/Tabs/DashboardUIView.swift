@@ -89,7 +89,7 @@ struct DashboardUIView: View {
                         
                         ScrollView(showsIndicators: false) {
                             
-                            LazyVStack(alignment: .leading){
+                            LazyVStack(alignment: .leading) {
                             
                                 ForEach(sampleData, id: \.id){product in
                                     
@@ -119,6 +119,13 @@ struct DashboardUIView: View {
                                                 .font(.system(.footnote, design: .rounded))
                                                 .foregroundColor(.gray)
                                             Spacer()
+                                        }
+                                    }
+                                    .onTapGesture {
+                                        
+                                        withAnimation(.default) {
+                                            self.selectedProduct = product
+                                            self.detailIsShown.toggle()
                                         }
                                     }
                                 }
