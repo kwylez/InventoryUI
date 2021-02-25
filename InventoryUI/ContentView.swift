@@ -27,7 +27,7 @@ struct ContentView: View {
                         detailsIsShown: self.$detailIsShown,
                         gradientHeight: reader.size.height / 2
                     )
-                    .frame(maxHeight: .infinity)
+                    .frame(height: reader.size.height)
                 }
 
                 VStack {
