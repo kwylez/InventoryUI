@@ -9,11 +9,9 @@ import SwiftUI
 
 struct FavoritesUIView: View {
     var body: some View {
-        
         VStack {
             Text("Hello World 4")
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
