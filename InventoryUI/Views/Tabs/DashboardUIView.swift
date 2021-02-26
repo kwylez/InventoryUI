@@ -249,7 +249,7 @@ struct DashboardUIView: View {
                 )
                 .edgesIgnoringSafeArea(.all)
                 .zIndex(1)
-                .transition(.slide)
+                .transition(.move(edge: .trailing))
                 .animation(.default)
             }
         }
