@@ -14,6 +14,8 @@ struct ContentView: View {
     /// move to environment var?
     @State private var detailIsShown: Bool = false
     
+    @State private var showMenu: Bool = false
+    
     var body: some View {
     
         GeometryReader {reader in
@@ -31,6 +33,7 @@ struct ContentView: View {
                 }
 
                 VStack {
+                    
                     Spacer()
                     Divider()
                     TabUIView(currentView: self.$currentView)

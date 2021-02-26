@@ -50,7 +50,7 @@ struct DashboardUIView: View {
                 )
                 .frame(height: gradientHeight)
                 Spacer()
-                ScrollView {
+                ScrollView(showsIndicators: false) {
                     
                     LazyVStack(alignment: .leading, spacing: 5) {
                         
@@ -135,6 +135,7 @@ struct DashboardUIView: View {
                     .padding(.top, 30)
                 }
                 .padding([.horizontal, .top], 20)
+                .padding(.bottom, 70)
             }
 
             VStack(alignment: .leading) {

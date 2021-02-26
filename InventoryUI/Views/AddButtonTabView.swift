@@ -12,6 +12,8 @@ struct AddButtonTabView: View {
     let action: () -> Void
     
     var radius: CGFloat = 50.0
+    
+    @Binding var showMenu: Bool
 
     var body: some View {
         
@@ -25,6 +27,7 @@ struct AddButtonTabView: View {
                 .background(Color(.white))
                 .cornerRadius(radius/2)
                 .shadow(color: Color.red.opacity(0.3), radius: 10, x: 0, y: 0)
+                .rotationEffect(Angle(degrees: showMenu ? 90 : 0))
 
         }
         .frame(width: radius, height: radius)
@@ -34,6 +37,6 @@ struct AddButtonTabView: View {
 
 struct AddButtonTabView_Previews: PreviewProvider {
     static var previews: some View {
-        AddButtonTabView(action: {})
+        AddButtonTabView(action: {}, showMenu: .constant(false))
     }
 }
