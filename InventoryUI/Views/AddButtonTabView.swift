@@ -27,7 +27,7 @@ struct AddButtonTabView: View {
                 .background(Color(.white))
                 .cornerRadius(radius/2)
                 .shadow(color: Color.red.opacity(0.3), radius: 10, x: 0, y: 0)
-                .rotationEffect(Angle(degrees: showMenu ? 90 : 0))
+                .rotationEffect(Angle(degrees: showMenu ? 45 : 0))
 
         }
         .frame(width: radius, height: radius)
