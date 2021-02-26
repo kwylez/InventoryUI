@@ -37,7 +37,7 @@ struct TabUIView: View {
 
                     AddButtonTabView(action: {
 
-                        withAnimation {
+                        withAnimation(.spring()) {
                             self.showMenu.toggle()
                         }
                     }, showMenu: $showMenu)
