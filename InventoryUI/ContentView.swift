@@ -40,14 +40,18 @@ struct ContentView: View {
                         .frame(minHeight: 70)
                         .background(Color.white)
                 }
-                .opacity(viewModel.detailIsShown || viewModel.showFolderDetailView ? 0 : 1)
+                .opacity(viewModel.detailIsShown ? 0 : 1)
+                .zIndex(2.0)
                 
                 if viewModel.showFolderDetailView {
+                    
                     Rectangle()
-                        .background(Color.green)
+                        .fill(Color.green)
+                        .overlay(Text("Folder text"))
                         .onTapGesture {
                             viewModel.showFolderDetailView.toggle()
                         }
+                        .zIndex(3.0)
                 }
             }
             .frame(width: reader.size.width, height: reader.size.height)
