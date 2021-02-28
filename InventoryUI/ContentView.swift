@@ -12,7 +12,8 @@ struct ContentView: View {
     @State private var currentView: Tab = .dashboard
     
     /// move to environment var?
-    @State private var detailIsShown: Bool = false
+//    @State private var detailIsShown: Bool = false
+    @EnvironmentObject var viewModel: ViewModel
     
     @State private var showMenu: Bool = false
     
@@ -26,7 +27,6 @@ struct ContentView: View {
                     
                     CurrentUIView(
                         currentView: self.$currentView,
-                        detailsIsShown: self.$detailIsShown,
                         gradientHeight: reader.size.height / 2
                     )
                     .frame(height: reader.size.height)
@@ -40,7 +40,15 @@ struct ContentView: View {
                         .frame(minHeight: 70)
                         .background(Color.white)
                 }
-                .opacity(detailIsShown ? 0 : 1)
+                .opacity(viewModel.detailIsShown || viewModel.showFolderDetailView ? 0 : 1)
+                
+                if viewModel.showFolderDetailView {
+                    Rectangle()
+                        .background(Color.green)
+                        .onTapGesture {
+                            viewModel.showFolderDetailView.toggle()
+                        }
+                }
             }
             .frame(width: reader.size.width, height: reader.size.height)
         }

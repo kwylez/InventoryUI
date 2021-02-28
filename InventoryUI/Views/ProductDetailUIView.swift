@@ -11,7 +11,7 @@ struct ProductDetailUIView: View {
     
     @Binding var selectedProduct: Product?
     
-    @Binding var detailIsShown: Bool
+    @EnvironmentObject var viewModel: ViewModel
     
     private let gradient: Gradient = Gradient(colors: [.white, .clear])
     
@@ -46,7 +46,7 @@ struct ProductDetailUIView: View {
                                 .foregroundColor(.black)
                                 .font(.title2)
                                 .onTapGesture {
-                                    detailIsShown.toggle()
+                                    viewModel.detailIsShown.toggle()
                                     selectedProduct = nil
                                 }
                             
@@ -205,19 +205,19 @@ struct ProductDetailUIView_Previews: PreviewProvider {
         
         Group {
         
-            ProductDetailUIView(selectedProduct: .constant(sampleData[0]), detailIsShown: .constant(false))
+            ProductDetailUIView(selectedProduct: .constant(sampleData[0]))
             
-            ProductDetailUIView(selectedProduct: .constant(sampleData[1]), detailIsShown: .constant(false))
-            
-            ProductDetailUIView(selectedProduct: .constant(sampleData[2]), detailIsShown: .constant(false))
-            
-            ProductDetailUIView(selectedProduct: .constant(sampleData[3]), detailIsShown: .constant(false))
-
-            ProductDetailUIView(selectedProduct: .constant(sampleData[4]), detailIsShown: .constant(false))
-            
-            ProductDetailUIView(selectedProduct: .constant(sampleData[5]), detailIsShown: .constant(false))
-            
-            ProductDetailUIView(selectedProduct: .constant(sampleData[6]), detailIsShown: .constant(false))
+//            ProductDetailUIView(selectedProduct: .constant(sampleData[1]), detailIsShown: .constant(false))
+//
+//            ProductDetailUIView(selectedProduct: .constant(sampleData[2]), detailIsShown: .constant(false))
+//
+//            ProductDetailUIView(selectedProduct: .constant(sampleData[3]), detailIsShown: .constant(false))
+//
+//            ProductDetailUIView(selectedProduct: .constant(sampleData[4]), detailIsShown: .constant(false))
+//
+//            ProductDetailUIView(selectedProduct: .constant(sampleData[5]), detailIsShown: .constant(false))
+//
+//            ProductDetailUIView(selectedProduct: .constant(sampleData[6]), detailIsShown: .constant(false))
         }
     }
 }

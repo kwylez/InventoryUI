@@ -13,7 +13,7 @@ struct DashboardUIView: View {
     
     let gradientHeight: CGFloat
     
-    @Binding var detailIsShown: Bool
+    @EnvironmentObject var viewModel: ViewModel
     
     // MARK: Private (properties)
     
@@ -73,7 +73,7 @@ struct DashboardUIView: View {
                                         .onTapGesture {
                                             withAnimation(.default) {
                                                 self.selectedProduct = product
-                                                self.detailIsShown.toggle()
+                                                self.viewModel.detailIsShown.toggle()
                                             }
                                         }
                                 }
@@ -125,7 +125,7 @@ struct DashboardUIView: View {
                                         
                                         withAnimation(.default) {
                                             self.selectedProduct = product
-                                            self.detailIsShown.toggle()
+                                            self.viewModel.detailIsShown.toggle()
                                         }
                                     }
                                 }
@@ -241,11 +241,10 @@ struct DashboardUIView: View {
             }
             .padding(.top, 64)
             
-            if self.detailIsShown {
+            if self.viewModel.detailIsShown {
                 
                 ProductDetailUIView(
-                    selectedProduct: $selectedProduct,
-                    detailIsShown: $detailIsShown
+                    selectedProduct: $selectedProduct
                 )
                 .edgesIgnoringSafeArea(.all)
                 .zIndex(1)
@@ -258,6 +257,6 @@ struct DashboardUIView: View {
 
 struct DashboardUIView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardUIView(gradientHeight: 480, detailIsShown: .constant(false))
+        DashboardUIView(gradientHeight: 480)
     }
 }
