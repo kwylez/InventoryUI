@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct FeedUIView: View {
+    
     var body: some View {
         VStack {
-            Text("Hello World 2")
+            CircleTextView(foregroundColor: .purple, text: "Feed")
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 

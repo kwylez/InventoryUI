@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		01568F5225EC261B0004104C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01568F5125EC261B0004104C /* ViewModel.swift */; };
+		015D5FD125ED8D470088F34F /* CircleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D5FD025ED8D470088F34F /* CircleTextView.swift */; };
 		0181EFB325AFE51E00A36BDF /* ProductDetailUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0181EFB225AFE51E00A36BDF /* ProductDetailUIView.swift */; };
 		018976F725AE511800EE7DF7 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018976F625AE511800EE7DF7 /* Product.swift */; };
 		019B863025A6BDAA0050AEB1 /* InventoryUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B862F25A6BDAA0050AEB1 /* InventoryUIApp.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		01568F5125EC261B0004104C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		015D5FD025ED8D470088F34F /* CircleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTextView.swift; sourceTree = "<group>"; };
 		0181EFB225AFE51E00A36BDF /* ProductDetailUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailUIView.swift; sourceTree = "<group>"; };
 		018976F625AE511800EE7DF7 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		019B862C25A6BDAA0050AEB1 /* InventoryUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InventoryUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,7 @@
 				01E7537F25A906E4001020FD /* AddButtonTabView.swift */,
 				019B865525A748CB0050AEB1 /* CurrentUIView.swift */,
 				0181EFB225AFE51E00A36BDF /* ProductDetailUIView.swift */,
+				015D5FD025ED8D470088F34F /* CircleTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				019B864B25A6C0FD0050AEB1 /* FavoritesUIView.swift in Sources */,
+				015D5FD125ED8D470088F34F /* CircleTextView.swift in Sources */,
 				019B863225A6BDAA0050AEB1 /* ContentView.swift in Sources */,
 				019B865325A6C6690050AEB1 /* TabUIView.swift in Sources */,
 				019B864525A6C0C90050AEB1 /* DashboardUIView.swift in Sources */,
