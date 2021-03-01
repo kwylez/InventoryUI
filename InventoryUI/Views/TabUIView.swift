@@ -11,7 +11,7 @@ struct TabUIView: View {
     
     @Binding var currentView: Tab
     
-    @State private var showMenu: Bool = false
+    @EnvironmentObject var viewModel: ViewModel
     
     var body: some View {
         
@@ -38,9 +38,9 @@ struct TabUIView: View {
                     AddButtonTabView(action: {
 
                         withAnimation(.spring()) {
-                            self.showMenu.toggle()
+                            self.viewModel.showMenu.toggle()
                         }
-                    }, showMenu: $showMenu)
+                    })
                     .offset(y: -18.5)
                     
                     Image(systemName: self.currentView == .favorites ? "folder.fill" : "folder")
@@ -58,7 +58,7 @@ struct TabUIView: View {
                     Spacer()
                 }
                 
-                if showMenu {
+                if viewModel.showMenu {
                    
                     PlusMenu()
                         .offset(y: (reader.frame(in: .local).minY - 75))
@@ -70,12 +70,15 @@ struct TabUIView: View {
 }
 
 struct TabUIView_Previews: PreviewProvider {
+
     static var previews: some View {
         TabUIView(currentView: .constant(.dashboard))
     }
 }
 
 private struct PlusMenu: View {
+    
+    @EnvironmentObject var viewModel: ViewModel
     
     private let widthAndHeight: CGFloat = 25.0
     
@@ -102,6 +105,12 @@ private struct PlusMenu: View {
                     .frame(width: widthAndHeight, height: widthAndHeight)
                     .foregroundColor(.white)
             }
+            .onTapGesture(perform: {
+                
+                withAnimation(.spring()) {
+                    viewModel.showFolderDetailView.toggle()
+                }
+            })
         }
         .transition(.scale)
     }
