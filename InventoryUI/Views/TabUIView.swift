@@ -70,6 +70,7 @@ struct TabUIView: View {
 }
 
 struct TabUIView_Previews: PreviewProvider {
+
     static var previews: some View {
         TabUIView(currentView: .constant(.dashboard))
     }
@@ -105,7 +106,10 @@ private struct PlusMenu: View {
                     .foregroundColor(.white)
             }
             .onTapGesture(perform: {
-                viewModel.showFolderDetailView.toggle()
+                
+                withAnimation(.spring()) {
+                    viewModel.showFolderDetailView.toggle()
+                }
             })
         }
         .transition(.scale)

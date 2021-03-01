@@ -10,12 +10,8 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var currentView: Tab = .dashboard
-    
-    /// move to environment var?
-//    @State private var detailIsShown: Bool = false
+
     @EnvironmentObject var viewModel: ViewModel
-    
-    @State private var showMenu: Bool = false
     
     var body: some View {
     
@@ -49,9 +45,13 @@ struct ContentView: View {
                         .fill(Color.green)
                         .overlay(Text("Folder text"))
                         .onTapGesture {
-                            viewModel.showFolderDetailView.toggle()
+                            withAnimation {
+                                viewModel.showFolderDetailView.toggle()
+                            }
                         }
                         .zIndex(3.0)
+                        .animation(.spring())
+                        .transition(.move(edge: .bottom))
                 }
             }
             .frame(width: reader.size.width, height: reader.size.height)
@@ -64,6 +64,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         
         ContentView()
+            .environmentObject(ViewModel())
             .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
             .previewDisplayName("iPhone 12")
     }
