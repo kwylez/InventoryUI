@@ -25,6 +25,7 @@
 		019B865925A748DB0050AEB1 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B865825A748DB0050AEB1 /* Tab.swift */; };
 		01A4CB3725A80B1500EEF35A /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A4CB3625A80B1500EEF35A /* Color+Extensions.swift */; };
 		01E7538025A906E4001020FD /* AddButtonTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E7537F25A906E4001020FD /* AddButtonTabView.swift */; };
+		01F8D88325EDD63000F2C459 /* PaddedTitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8D88225EDD63000F2C459 /* PaddedTitleText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		019B865825A748DB0050AEB1 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		01A4CB3625A80B1500EEF35A /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		01E7537F25A906E4001020FD /* AddButtonTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonTabView.swift; sourceTree = "<group>"; };
+		01F8D88225EDD63000F2C459 /* PaddedTitleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTitleText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		019B862E25A6BDAA0050AEB1 /* InventoryUI */ = {
 			isa = PBXGroup;
 			children = (
+				01F8D88125EDD61D00F2C459 /* Modifiers */,
 				019B863825A6BDAB0050AEB1 /* Info.plist */,
 				019B863125A6BDAA0050AEB1 /* ContentView.swift */,
 				019B862F25A6BDAA0050AEB1 /* InventoryUIApp.swift */,
@@ -149,6 +152,14 @@
 				01A4CB3625A80B1500EEF35A /* Color+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		01F8D88125EDD61D00F2C459 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				01F8D88225EDD63000F2C459 /* PaddedTitleText.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +238,7 @@
 				019B864525A6C0C90050AEB1 /* DashboardUIView.swift in Sources */,
 				019B864825A6C0E50050AEB1 /* AddUIView.swift in Sources */,
 				019B865625A748CB0050AEB1 /* CurrentUIView.swift in Sources */,
+				01F8D88325EDD63000F2C459 /* PaddedTitleText.swift in Sources */,
 				019B864225A6C07D0050AEB1 /* FeedUIView.swift in Sources */,
 				019B865925A748DB0050AEB1 /* Tab.swift in Sources */,
 				01E7538025A906E4001020FD /* AddButtonTabView.swift in Sources */,

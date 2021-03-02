@@ -20,9 +20,7 @@ struct CircleTextView: View {
             .frame(width: 200, height: 200)
             .overlay(
                 Text(text)
-                    .bold()
-                    .font(.system(.title2, design: .rounded))
-                    .padding(.horizontal)
+                    .paddedTitleText()
             )
     }
 }

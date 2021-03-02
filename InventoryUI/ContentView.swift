@@ -43,10 +43,32 @@ struct ContentView: View {
                     
                     Rectangle()
                         .fill(Color.green)
-                        .overlay(Text("Folder text"))
+                        .overlay(
+                            Text("Folder text")
+                                .paddedTitleText()
+                        )
                         .onTapGesture {
                             withAnimation {
                                 viewModel.showFolderDetailView.toggle()
+                            }
+                        }
+                        .zIndex(3.0)
+                        .animation(.spring())
+                        .transition(.move(edge: .bottom))
+                }
+                
+                if viewModel.showCartDetailView {
+                    
+                    
+                    Rectangle()
+                        .fill(Color.green)
+                        .overlay(
+                            Text("Cart text")
+                                .paddedTitleText()
+                        )
+                        .onTapGesture {
+                            withAnimation {
+                                viewModel.showCartDetailView.toggle()
                             }
                         }
                         .zIndex(3.0)
