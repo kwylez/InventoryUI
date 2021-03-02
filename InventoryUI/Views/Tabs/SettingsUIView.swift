@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct SettingsUIView: View {
+    
     var body: some View {
+    
         VStack {
             CircleTextView(foregroundColor: .red, text: "Settings")
         }

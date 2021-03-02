@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct AddUIView: View {
+    
     var body: some View {
+    
         VStack {
             CircleTextView(foregroundColor: .orange, text: "Add")
         }

@@ -10,6 +10,7 @@ import SwiftUI
 struct FeedUIView: View {
     
     var body: some View {
+        
         VStack {
             CircleTextView(foregroundColor: .purple, text: "Feed")
         }
