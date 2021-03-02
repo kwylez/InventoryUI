@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct SettingsUIView: View {
+    
     var body: some View {
+    
         VStack {
-            Text("Hello World 5")
+            CircleTextView(foregroundColor: .red, text: "Settings")
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 

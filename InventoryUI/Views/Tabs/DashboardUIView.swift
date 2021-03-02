@@ -49,7 +49,9 @@ struct DashboardUIView: View {
                     endPoint: .bottomTrailing
                 )
                 .frame(height: gradientHeight)
+                
                 Spacer()
+                
                 ScrollView(showsIndicators: false) {
                     
                     LazyVStack(alignment: .leading, spacing: 5) {
@@ -111,9 +113,13 @@ struct DashboardUIView: View {
                                                 .font(.system(.footnote, design: .rounded))
                                                 .foregroundColor(.gray)
                                         }
+                                        
                                         Spacer()
+                                        
                                         VStack {
+                                        
                                             Spacer()
+                                            
                                             Text(product.costDisplay)
                                                 .bold()
                                                 .font(.system(.footnote, design: .rounded))
@@ -141,7 +147,9 @@ struct DashboardUIView: View {
             VStack(alignment: .leading) {
                 
                 VStack(spacing: 5.0) {
+                    
                     HStack {
+                    
                         Text("Overview")
                             .font(.system(.largeTitle, design: .rounded))
                             .foregroundColor(.white)
@@ -150,6 +158,7 @@ struct DashboardUIView: View {
                     }
 
                     HStack {
+                        
                         Text("Your monthly budget was $2000")
                             .foregroundColor(Color.white.opacity(0.3))
                             .font(.system(.footnote, design: .rounded))
@@ -202,6 +211,7 @@ struct DashboardUIView: View {
                     VStack {
 
                         ZStack {
+                            
                             Circle()
                                 .trim(from: 0, to: 0.75)
                                 .stroke(
@@ -212,7 +222,9 @@ struct DashboardUIView: View {
                                 .rotationEffect(.degrees(-90))
                                 .frame(width: 125, height: 125)
                                 .overlay(
+                            
                                     VStack {
+                                    
                                         Text("75%")
                                             .foregroundColor(.dashboardYellow)
                                             .bold()

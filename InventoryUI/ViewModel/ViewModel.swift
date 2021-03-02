@@ -18,4 +18,6 @@ class ViewModel: ObservableObject {
     @Published var detailIsShown: Bool = false
     
     @Published var showFolderDetailView: Bool = false
+    
+    @Published var showCartDetailView: Bool = false
 }

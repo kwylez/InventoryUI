@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct AddUIView: View {
+    
     var body: some View {
+    
         VStack {
-            Text("Hello World 3")
+            CircleTextView(foregroundColor: .orange, text: "Add")
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
@@ -21,3 +22,4 @@ struct AddUIView_Previews: PreviewProvider {
         AddUIView()
     }
 }
+

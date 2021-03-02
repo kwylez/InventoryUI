@@ -91,10 +91,16 @@ private struct PlusMenu: View {
                 Circle()
                     .foregroundColor(Color.red)
                     .frame(width: widthAndHeight + 15, height: widthAndHeight + 15)
-                Image(systemName: "record.circle")
+                Image(systemName: "bag.fill")
                     .frame(width: widthAndHeight, height: widthAndHeight)
                     .foregroundColor(.white)
             }
+            .onTapGesture(perform: {
+                
+                withAnimation(.spring()) {
+                    viewModel.showCartDetailView.toggle()
+                }
+            })
             
             ZStack {
             

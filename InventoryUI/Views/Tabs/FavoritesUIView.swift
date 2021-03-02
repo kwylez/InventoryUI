@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct FavoritesUIView: View {
+    
     var body: some View {
+    
         VStack {
-            Text("Hello World 4")
+            CircleTextView(foregroundColor: .blue, text: "Favorites")
         }
     }
 }
