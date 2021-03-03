@@ -6,7 +6,7 @@
 
 ## Post
 
-[Fun Times Creating an Inventory App with SwiftUI](https://medium.com/@kwylez/fun-times-creating-a-dashboard-with-swiftui-28b68f1ffb89)
+[Fun Times Creating an Inventory App with SwiftUI](https://kwylez.medium.com/fun-times-creating-an-inventory-app-with-swiftui-85ad7722b52b)
 
 ## Screenshots
 
